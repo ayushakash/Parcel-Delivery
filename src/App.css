@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+#form1{
+
+  margin-left: 15%;
+  width: 300px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#form2{
+  margin-right: 15%;
+  width: 300px;
+}
+.form-label{
+
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+*{
+
+  /* font-family: 'Edu QLD Beginner', cursive; */
+font-family: 'Roboto Mono', monospace;
+font-size: medium;
+
+
+
+
+
+}
+.form{
+
+  width:1200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hidden{
+  display: none;
+}
+.show{
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main{
+  background-color: rgb(175, 180, 255);
 }
