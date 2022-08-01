@@ -2,10 +2,7 @@ import React from 'react'
 import Confirmation from "./Confirmation";
 
 import { useState } from "react";
-
-
  
-
 export default function Body() {
     const [senderAddress, setsenderAddress] = useState("");
     const [receiverAddress, setreceiverAddress] = useState("");
