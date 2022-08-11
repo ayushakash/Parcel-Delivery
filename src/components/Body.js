@@ -1,7 +1,9 @@
-import React from 'react'
-import Confirmation from "./Confirmation";
 
-import { useState } from "react";
+import React, { useState } from 'react'
+import Confirmation from "./Confirmation";
+// const id= process.env.REACT_APP_EMAIL_ID;
+
+
  
 export default function Body() {
     const [senderAddress, setsenderAddress] = useState("");
@@ -16,10 +18,14 @@ export default function Body() {
     const [receiverName, setreceiverName] = useState("");
     const [senderEmail, setsenderEmail] = useState("");
     const [receiverEmail, setreceiverEmail] = useState("");
+    const[btnCss,setbtnCss]=useState("btn btn-outline-success btn-block mb-5");
+    
     
 
     let   handleSubmit = async (e) => {
         e.preventDefault();
+        setbtnCss('btn btn-danger  btn-block mb-5 ')
+        // console.log(process.env.REACT_APP);
         try {
           let res = await fetch("http://www.mapquestapi.com/directions/v2/route?key=PM9unQ5sdswrknRGzNISmlMpikyVVDdT", {
             method: "POST",
@@ -46,9 +52,7 @@ export default function Body() {
           });
           let resJson = await res.json();
           if (res.status === 200) {
-            //   setName("");
-            //   setEmail("");
-            // setMessage("User created successfully");
+           
             setdistance(await (resJson.route.distance))
             settime(await (resJson.route.formattedTime))
             setstyle('show');
@@ -126,7 +130,7 @@ export default function Body() {
                         </div>
 
                         {/* <!-- Submit button --> */}
-                        <button type="submit" className="btn btn-outline-success btn-block">Send Parcel</button>
+                        <button type="submit" className={btnCss}>Send Parcel</button>
                 </div>
             </div>
                     </form>

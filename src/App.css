@@ -39,3 +39,7 @@ font-size: medium;
 .main{
   background-color: rgb(175, 180, 255);
 }
+
+.confirm{
+  background-color: green;
+}
