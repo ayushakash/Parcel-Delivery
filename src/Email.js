@@ -30,8 +30,8 @@ app.post('/email', cors(), async (req, res) => {
             host: 'smtp.hostinger.com',
             port: 465,
             auth: {
-                user: 'info@chardeevari.in',
-                pass: 'AbhinavAyush@9'
+                user: process.env.REACT_APP_EMAIL_ID,
+                pass: process.env.REACT_APP_PASSWORD
             }
         });
 
